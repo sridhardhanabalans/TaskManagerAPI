@@ -19,6 +19,7 @@ namespace TaskManager.API.Controllers
         [HttpGet]
         [Route("api/Task/GetAllTasks")]
         [ResponseType(typeof(List<Task>))]
+        //Method used to get all task items list
         public IHttpActionResult GetAllTasks()
         {
             blObject = new TaskManagerBL();
@@ -29,6 +30,7 @@ namespace TaskManager.API.Controllers
         [HttpGet]
         [Route("api/Task/GetTaskById/{Id}")]
         [ResponseType(typeof(Task))]
+        //Method used to get  task item by id 
         public IHttpActionResult GetTaskById(int Id)
         {
             blObject = new TaskManagerBL();
@@ -43,6 +45,7 @@ namespace TaskManager.API.Controllers
         [HttpPost]
         [Route("api/Task/AddTask")]
         [ResponseType(typeof(void))]
+        //Method used to add new task
         public IHttpActionResult AddTask([FromBody]Task newTask)
         {
             if (!ModelState.IsValid)
@@ -57,6 +60,7 @@ namespace TaskManager.API.Controllers
         [HttpPut]
         [Route("api/Task/UpdateTask")]
         [ResponseType(typeof(void))]
+        //Method used to update existing task
         public IHttpActionResult UpdateTask([FromBody]Task editTask)
         {
             if (!ModelState.IsValid)
@@ -71,6 +75,7 @@ namespace TaskManager.API.Controllers
         [HttpDelete]
         [Route("api/Task/DeleteTask/{Id}")]
         [ResponseType(typeof(void))]
+        //Method used to delete existing task item
         public IHttpActionResult DeleteTask(int Id)
         {
             blObject = new TaskManagerBL();

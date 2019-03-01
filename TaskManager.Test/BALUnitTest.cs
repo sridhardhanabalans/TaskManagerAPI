@@ -7,6 +7,7 @@ namespace TaskManager.BusinessLayer.Tests
 {
     
     [TestClass()]
+    // Test Class contains unit Test Methods
     public class BALUnitTest
     {
         TaskManagerBL blObj = new TaskManagerBL();
@@ -19,6 +20,7 @@ namespace TaskManager.BusinessLayer.Tests
         }
 
         [TestMethod()]
+        //Test Method for GetByTask Id
         public void GetTaskByIdTest()
         {
             int id = 1;
@@ -28,6 +30,7 @@ namespace TaskManager.BusinessLayer.Tests
         }
 
         [TestMethod()]
+        //Test Method for AddTask List Items
         public void AddTaskTest()
         {
             Task task = new Task { Task_ID = 0, TaskName = "Task 9", Parent = null, Start_Date = DateTime.Now.AddDays(-10), End_Date = DateTime.Now.AddDays(5), Parent_ID = null, Priority = 10 };
@@ -45,6 +48,7 @@ namespace TaskManager.BusinessLayer.Tests
         }
 
         [TestMethod()]
+        //Test Method for Update List Items
         public void UpdateTaskTest()
         {
             Task task = new Task { Task_ID = 1, TaskName = "Task 1", Parent = null, Start_Date = DateTime.Now.AddDays(-10), End_Date = DateTime.Now.AddDays(5), Parent_ID = null, Priority = 10 };
@@ -61,6 +65,7 @@ namespace TaskManager.BusinessLayer.Tests
         }
 
         [TestMethod()]
+        //Test Method for Delete List Item
         public void DeleteTaskTest()
         {
             int id = 2;
